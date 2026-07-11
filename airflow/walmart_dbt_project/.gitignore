@@ -1,0 +1,12 @@
+dbt_packages/
+dbt_internal_packages/
+logs/
+target/
+.env
+*.env
+.env.*
+secrets.*
+*.pem
+*.key
+*.p12
+*.pfx

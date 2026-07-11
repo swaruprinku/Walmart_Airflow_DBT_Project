@@ -1,0 +1,12 @@
+jaffle_shop:
+  target: dev
+  outputs:
+    dev:
+      type: databricks
+      database: "{{ env_var('DBT_DATABRICKS_DATABASE', 'walmart') }}"
+      schema: "{{ env_var('DBT_DATABRICKS_SCHEMA', 'dbt_schema') }}"
+      host: "{{ env_var('DBT_DATABRICKS_HOST', 'dbc-a6e4f6c8-e569.cloud.databricks.com') }}"
+      http_path: "{{ env_var('DBT_DATABRICKS_HTTP_PATH', '/sql/1.0/warehouses/c7e35feecf20b5f9') }}"
+      auth_type: token
+      token: "{{ env_var('DBT_DATABRICKS_TOKEN', '') }}"
+      threads: 16
